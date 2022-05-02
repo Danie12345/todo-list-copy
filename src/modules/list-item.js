@@ -59,6 +59,7 @@ export default class Item {
     });
     const move = document.createElement('i');
     move.setAttribute('class', 'fas fa-ellipsis-v options');
+    move.setAttribute('style', 'display:block;');
     task.addEventListener('focusin', () => {
       del.setAttribute('style', 'display:block');
       move.setAttribute('style', 'display:none');
@@ -74,7 +75,6 @@ export default class Item {
     del.addEventListener('mouseout', () => {
       this.mouseOver = false;
     });
-    move.setAttribute('style', 'display:block;');
     options.appendChild(del);
     options.appendChild(move);
 
