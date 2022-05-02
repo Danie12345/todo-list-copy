@@ -46,6 +46,7 @@ export default class List {
 
   removeSelected() {
     const temp = Object.values(this.list).filter((item) => !item.completed);
+    if (temp.length < 1) return;
     this.list = {};
     this.#updateStorage();
     temp.forEach((item) => {
